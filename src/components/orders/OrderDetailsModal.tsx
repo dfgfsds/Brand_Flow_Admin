@@ -244,7 +244,7 @@ export default function OrderDetailsModal({ order, onClose, onUpdateStatus }: Or
                     </div>
 
                     <div className='flex justify-between items-center'>
-                      {!(data?.data?.status === 'Cancelled' || data?.data?.status === 'Delivered' || data?.data?.status === 'Cancelled/Refunded') && (
+                      {!(data?.data?.status === 'Cancelled' || data?.data?.status === 'Delivered' || data?.data?.status === 'Cancelled/Refunded' || data?.data?.status === 'Failed') && (
                         <div>
                           <label className="block text-md mb-2 font-medium text-black">Update Status</label>
                           <select
@@ -454,7 +454,7 @@ export default function OrderDetailsModal({ order, onClose, onUpdateStatus }: Or
               </div>
 
               {/* Shiprocket Actions */}
-              {data?.data?.status !== 'Delivered' && data?.data?.status !== 'Cancelled/Refunded' && data?.data?.status !== 'Shipment Failed' && data?.data?.status !== 'Cancelled' && data?.data?.status !== 'Failed' && data?.data?.status !== 'Cancellation Requested' && (
+              {data?.data?.status !== 'Delivered' && data?.data?.status !== 'Cancelled/Refunded' && data?.data?.status !== 'Shipment Failed' && data?.data?.status !== 'Cancelled' && data?.data?.status !== 'Failed' && data?.data?.status !== 'Cancellation Requested' && data?.data?.delivery_partner !== 'own_delivery' && (
                 <>
                   {data?.data?.payment_status !== 'unpaid' && (
                     <div className="space-y-2 mt-4">

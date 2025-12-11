@@ -862,7 +862,7 @@ export default function ProductModal({
                 </div>
               ))}
 
-              <div className="flex justify-between items-center mb-4">
+              {/* <div className="flex justify-between items-center mb-4">
                 <Button
                   type="button"
                   onClick={() => appendVariety({ color: '' })}
@@ -872,7 +872,7 @@ export default function ProductModal({
                   <Plus className="h-4 w-4 mr-2" />
                   Add Variety
                 </Button>
-              </div>
+              </div> */}
             </div>
             {errorMessage && (
               <p className="text-red-500 mt-2">{errorMessage}</p>
